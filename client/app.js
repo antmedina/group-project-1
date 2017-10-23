@@ -1,15 +1,15 @@
-angular.module('storefront', ['ngRoute', 'ngResource', '.controllers', '.factories', '.services'])
+angular.module('storefront', ['ngRoute', 'ngResource'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
-    .when('/welcome', {
+    .when('/', {
         templateUrl: 'views/welcome.html',
         controller: ''
     })
-//     .when('/storefront', {
-//         templateUrl: 'views/storefront.html',
-//         controller: 'ComposePostController'
-//     })
+    .when('/storefront', {
+        templateUrl: 'views/storefront.html',
+        // controller: 'ComposePostController'
+    })
 //     .when('/login', {
 //         templateUrl: 'views/.html',
 //         controller: 'LoginController'
