@@ -4,8 +4,13 @@
   "description": "An online store for Covalence merch",
   "main": "server/index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node server/index.js"
+=======
+    "test": "source .variables && nodemon",
+    "start": "node server/index.js"
+>>>>>>> test
   },
   "keywords": [
     "covalence"
@@ -14,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "prerender-node": "^2.7.4"
   }
 }
-
