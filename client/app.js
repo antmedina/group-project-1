@@ -3,7 +3,7 @@ angular.module('storefront', ['ngRoute', 'ngResource', '.controllers', '.factori
     $locationProvider.html5Mode(true);
     $routeProvider
     .when('/welcome', {
-        templateUrl: '/views/welcome.html',
+        templateUrl: 'views/welcome.html',
         controller: ''
     })
 //     .when('/storefront', {
