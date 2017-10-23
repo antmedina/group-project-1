@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="storefront">
 <head>
+    <meta name="fragment" content="!">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, Chrome=1">
+    <meta name='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=evoce-width'>
+    <title>{{ seo.title }}</title>
+    <meta property="og:title" content="{{ seo.title }}">
+    <meta property="twitter:title" content="{{ seo.title }}">
+    <meta property="og:image" content="{{ seo.image }}">
+    <meta property="twitter:image" content="{{ seo.image }}">
+    <meta property="og:url" content="{{ seo.url }}">
+    <meta property="twitter:url" content="{{ seo.url }}">
+    <meta property="description" content="{{ seo.description }}">
+    <meta property="og:description" content="{{ seo.description }}">
+    <meta property="twitter:description" content="{{ seo.description }}">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <title>Covalence Online Store</title>
+
 </head>
 <body>
-    
+    <div ng-view></div>
     <script src="app.js"></script>
     <script src="script.js"></script>
+    <script src="services.js"></script>
 </body>
 </html>

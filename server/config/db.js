@@ -5,7 +5,7 @@ var pool = mysql.createPool({
     host: process.env.RDS_HOSTNAME,
     user: process.env.RDS_USER,
     password: process.env.RDS_PASSWORD,
-    database: '' //need database name
+    database: 'covalence-store' 
 });
 exports.pool = pool;
 
@@ -39,7 +39,7 @@ function callProcedure(procedureName, args) {
                 var placeholders = '';
                 if (args && args.length > 0) {
                     for (var i = 0; i < args.length; i++) {
-                        if (i === args.length - 1) { // if we are on the last argument in the array
+                        if (i === args.length - 1) { 
                             placeholders += '?';
                         } else {
                             placeholders += '?,';
