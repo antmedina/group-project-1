@@ -6,7 +6,7 @@ var prerender = require('prerender-node');
 prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
 var app = express();
 
-var clientPath = path.join(__dirname, "../Client");
+var clientPath = path.join(__dirname, "../client");
 
 app.use(prerender);
 app.use(express.static(clientPath));
