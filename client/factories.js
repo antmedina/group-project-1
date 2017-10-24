@@ -1,4 +1,4 @@
-// angular.module('store.factories', [])
+angular.module('store.factories', []);
 // .factory('#', ['$resource', function($resource) {
 //     return $resource('/api/#/:id', { id: '@id' }, {
 //         update: {
