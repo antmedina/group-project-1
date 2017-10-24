@@ -1,6 +1,6 @@
 /* Landing Page */
 
-body {
+.landingpage {
     background-image: url("/images/covalence-store-home.jpg");
     background-size: cover;
     background-position: center; 
