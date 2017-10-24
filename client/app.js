@@ -6,9 +6,9 @@ angular.module('store', ['ngRoute', 'ngResource'])
         templateUrl: 'views/welcome.html',
         controller: ''
     })
-    .when('/storefront', {
-        templateUrl: 'views/storefront.html',
-        // controller: 'ComposePostController'
+    .when('/apparel', {
+        templateUrl: 'views/apparel.html',
+        // controller: 'ApperlPostController'
     })
 //     .when('/login', {
 //         templateUrl: 'views/.html',
@@ -20,10 +20,10 @@ angular.module('store', ['ngRoute', 'ngResource'])
 //         requiresLogin: true,
 //         requiresAdmin: true
 //     })
-//     .when('/donate', {
-//         templateUrl: 'views/donate.html',
-//         controller: 'DonationController'
-//     })
+    .when('/cart', {
+        templateUrl: 'views/cart.html',
+    
+    })
 //     .when('/:id/update', {
 //         templateUrl: 'views/update.html',
 //         controller: 'UpdatePostController'
