@@ -1,20 +1,21 @@
-angular.module('storefront', ['ngRoute', 'ngResource', '', ''])
+angular.module('Store', ['ngRoute', 'ngResource'])
+
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-    .when('/', {
+    .when('/', { 
         templateUrl: 'views/welcome.html'
     })
-    .when('/', {
-        templateUrl: 'views/',
-        controller: ''
+    .when('/#!/merch', { //needs to match api route
+        templateUrl: 'views/merch.html',
+        controller: 'ProductsController' 
     })
-    .when('//:/', {
-        templateUrl: 'views/',
-        controller: ''
-    })-
-    .when('//:', {
-        templateUrl: 'views/s',
-        controller: ''
+    .when('/#!/cart', { //needs to match api route
+        templateUrl: 'views/cart.html',
+        controller: "PurchasesController" 
+    })
+    .when('/#!/products/:id', { //needs to match api route
+        templateUrl: 'views/detail.html',
+        controller: '' //products controller or create new "detail controller"
     })
     .otherwise({
         redirectTo: '/'
