@@ -46,7 +46,7 @@ function callProcedure(procedureName, args) {
                         }
                     }
                 }
-                var callString = 'CALL ' + procedureName + '(' + placeholders + ');'; // CALL GetChirps();, or CALL InsertChirp(?,?,?);
+                var callString = 'CALL ' + procedureName + '(' + placeholders + ');'; 
                 connection.query(callString, args, function(err, resultsets) {
                     connection.release();
                     if (err) {
