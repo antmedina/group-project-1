@@ -2,14 +2,10 @@
   "name": "covalence-store-project",
   "version": "1.0.0",
   "description": "An online store for Covalence merch",
-<<<<<<< HEAD
   "main": "server/index.js",
-=======
-  "main": "server/index.js", 
->>>>>>> c976b1256a28a7ed9ba34c6f9ac486f3c07f2c7d
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node Server/index.js"
+    "start": "node server/index.js"
   },
   "keywords": [
     "covalence"
@@ -21,4 +17,3 @@
     "express": "^4.16.2"
   }
 }
-
