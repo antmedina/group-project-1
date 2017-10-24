@@ -24,14 +24,14 @@ angular.module('store', ['ngRoute', 'ngResource'])
         templateUrl: 'views/cart.html',
     
     })
-//     .when('/:id/update', {
-//         templateUrl: 'views/update.html',
-//         controller: 'UpdatePostController'
-//     })
-//     .when('/:id', {
-//         templateUrl: 'views/single.html',
-//         controller: 'SinglePostController'
-//     })
+    .when('/about', {
+        templateUrl: 'views/aboutus.html',
+        // controller: 'UpdatePostController'
+    })
+    .when('/contact', {
+        templateUrl: 'views/contactus.html',
+        // controller: 'SinglePostController'
+    })
 //     .otherwise({
 //         redirectTo: '/'
 //     });
