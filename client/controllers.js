@@ -1,11 +1,11 @@
-var myApp = angular.module('Store', []);
+var myApp = angular.module('store.controllers', []);
 
-myApp.controller('ProductsController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+myApp.controller('ProductsController', ['$scope', '$resources', '$location', '$routeParams', function($scope, $resource, $location, $routeParams){
 	
 	console.log('ProductsController loaded...');
 
 	function getProducts() { //$scope.getProducts = function() 
-		$http.get('/api/Products').then(function(response){
+		$resources.get('/api/products').then(function(response){
 			$scope.Products = response.data;
 		});
 	}
@@ -16,12 +16,12 @@ myApp.controller('ProductsController', ['$scope', '$http', '$location', '$routeP
 }]);
 
 
-myApp.controller('PurchasesController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+myApp.controller('PurchasesController', ['$scope', '$resources', '$location', '$routeParams', function($scope, $resources, $location, $routeParams){
 	
 	console.log('PurchasesController loaded...');
 
 	function getPurchases() { //$scope.getPurchases = function() 
-		$http.get('/api/Purchases').then(function(response){
+		$resources.get('/api/purchases').then(function(response){
 			$scope.Purchases = response.data;
 		});
 	}
