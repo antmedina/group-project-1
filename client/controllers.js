@@ -8,7 +8,7 @@ angular.module('store.controllers', [])
     $scope.cart = function() { //I think we should use a detail html
         $location.path('/' + $routeParams.id + '/add_to_cart');
     }
-//CART CONTROLLER BELOW NEEDS TO BE SEPARATED
+//CART CONTROLLER SCOPE BELOW NEEDS TO BE SEPARATED
     $scope.remove = function() {
         if (confirm('Are you sure you want to remove this item from the cart?')) {
             $scope.product.$delete(function() {

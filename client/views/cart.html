@@ -6,9 +6,14 @@
     <div class="list-group-item" ng-repeat="p in purchases">
         <h3>{{ p.name }}</h3>
         <h5>{{ p.description }} {{ p.price }}</h5>
-    </div>
-    <!-- ng-model input template for cart -->
-    <input type="number" ng-model="cost">
-    <input type="number" ng-model="quantity">
-    <span>{{ cost * quantity | currency }}</span>
+        <input type="number" ng-model="cost">
+        <input type="number" ng-model="quantity">
+        <span>{{ cost * quantity | currency }}</span>
+    </div>    
+</div>
+<div>
+    <!-- ??ng-model input template for cart total?? Research it -->
+   
+    <!-- ADD "CHECKOUT" BUTTON -->
+    
 </div>
