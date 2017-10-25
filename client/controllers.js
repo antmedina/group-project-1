@@ -1,6 +1,9 @@
 angular.module('store.controllers', [])
-.controller('ProductsController', ['$scope', 'Product', function($scope, Product) {
-    $scope.products = Product.query(); //Check to see how the products table categorizes Merch & Apparel then use to query
+.controller('MerchController', ['$scope', 'Merch', function($scope, Merch) {
+    $scope.products = Merch.query(); 
+}])
+.controller('ApparelController', ['$scope', 'Apparel', function($scope, Apparel) {
+    $scope.products = Apparel.query(); 
 }])
 .controller('SingleProductController', ['$scope', '$routeParams', '$location', 'Product', function($scope, $routeParams, $location, Product) {
     $scope.product = Product.get({ id: $routeParams.id });
