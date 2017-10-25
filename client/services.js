@@ -6,4 +6,4 @@ angular.module('store.services', [])
                 $rootScope.seo[p] = data[p];
             }
         }
-    }]);
+    }])
