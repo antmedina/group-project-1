@@ -1,17 +1,24 @@
-angular.module('store.factories', []);
-// .factory('#', ['$resource', function($resource) {
-//     return $resource('/api/#/:id', { id: '@id' }, {
-//         update: {
-//             method: 'PUT'
-//         }
-//     });
-// }])
-// .factory('#', ['$resource', function($resource) {
-//     return $resource('/api/#/:id');
-// }])
-// .factory('#', ['$resource', function($resource) {
-//     return $resource('/api/#/:id');
-// }])
-// .factory('#', ['$resource', function($resource) {
-//     return $resource('/api/#/:id');
-// }]);
+angular.module('store.factories', [])
+
+    .factory('Products', ['$resource', function ($resource) {
+        return $resource('/api/products/:id', { id: '@id' }, {
+            queryByCategory: {
+                method: 'GET',
+                url: '/api/products/category/:categoryid',
+                isArray: true
+            }
+        });
+    }])
+
+
+    .factory('Purchases', ['$resource', function ($resource) {
+        return $resource('/api/purchases/:id');
+    }])
+
+    .factory('CreatePurchases', ['$resource', function ($resource) {
+        return $resource('/api/purchases/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT'
+            }
+        });
+    }]);
