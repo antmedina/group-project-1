@@ -1,21 +1,25 @@
-angular.module('Store', ['ngRoute', 'ngResource'])
-
-.config(['$routeProvider', function($routeProvider) {
+angular.module('store', ['ngRoute', 'ngResource', 'store.controllers', 'store.factories', 'store.services'])
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
     .when('/', { 
         templateUrl: 'views/welcome.html'
     })
-    .when('/#!/merch', { //needs to match api route
+    .when('/products/merch', {
         templateUrl: 'views/merch.html',
         controller: 'ProductsController' 
     })
-    .when('/#!/cart', { //needs to match api route
+    .when('/products/apparel', { 
+        templateUrl: 'views/apparel.html',
+        controller: 'ProductsController' 
+    })
+    .when('/purchases', {
         templateUrl: 'views/cart.html',
         controller: "PurchasesController" 
     })
-    .when('/#!/products/:id', { //needs to match api route
+    .when('/products/:id', { 
         templateUrl: 'views/detail.html',
-        controller: '' //products controller or create new "detail controller"
+        controller: 'DetailController' 
     })
     .otherwise({
         redirectTo: '/'
