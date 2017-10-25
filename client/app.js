@@ -5,19 +5,19 @@ angular.module('store', ['ngRoute', 'ngResource', 'store.controllers', 'store.fa
     .when('/', { 
         templateUrl: 'views/welcome.html'
     })
-    .when('/products/merch', { //needs to match api route
+    .when('/products/merch', {
         templateUrl: 'views/merch.html',
         controller: 'ProductsController' 
     })
-    .when('/products/apparel', { //needs to match api route
+    .when('/products/apparel', { 
         templateUrl: 'views/apparel.html',
         controller: 'ProductsController' 
     })
-    .when('/purchases', { //needs to match api route
+    .when('/purchases', {
         templateUrl: 'views/cart.html',
         controller: "PurchasesController" 
     })
-    .when('/products/:id', { //needs to match api route
+    .when('/products/:id', { 
         templateUrl: 'views/detail.html',
         controller: 'DetailController' 
     })
