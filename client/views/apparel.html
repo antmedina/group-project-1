@@ -1,0 +1,14 @@
+<div class="page-header row">
+    <h1 class="col-md-9">APPAREL</h1>
+</div>
+
+<div class="clear list-group">
+    <div class="list-group-item" ng-repeat="p in products">
+        <h3>{{ p.name }}</h3>
+        <h5>{{ p.description }} {{ p.price }}</h5>
+        <p>
+            <a class="btn btn-info" role="button" ng-click="addCart()">ADD TO CART</a>
+        </p>
+    </div>
+</div>
+

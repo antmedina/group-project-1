@@ -1,0 +1,14 @@
+<div class="page-header row">
+    <h1 class="col-md-9">MERCH</h1>
+</div>
+
+<div class="clear list-group">
+    <div class="list-group-item" ng-repeat="p in products">
+        ** I think Apparel and Merch will need separate Controllers otherwise all products will load on one page / Note to Check with David **
+        <h3>{{ p.name }}</h3>
+        <h5>{{ p.description }} {{ p.price }}</h5>
+        <p>
+            <a class="btn btn-info" role="button" ng-href="/{{ p.id }}">ADD TO CART</a>
+        </p>
+    </div>
+</div>
