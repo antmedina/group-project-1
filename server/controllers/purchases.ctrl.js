@@ -13,8 +13,8 @@ router.post('/', function (req, res) {
         })
         .then(function (purchase) {
             var promises = [];
-            for (i = 0; i < req.body.product.length; i++) {
-                promises.push(procedures.createToPurchased(req.body.product[i], purchase.id));
+            for (i = 0; i < checkoutItems.length; i++) {
+                promises.push(procedures.createToPurchased(checkoutItems.id[i], purchase.id));
             }
             return Promise.all(promises);
         })
