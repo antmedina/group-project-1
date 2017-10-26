@@ -6,10 +6,10 @@
     <h1 class="col-md-12">CHECKOUT</h1>
 </div>
 <!-- CART CONTROLLER BINDING -->
-<div ng-repeat="s in shoppingCart">
-    <img src="{{ s.imageurl }}" width="300" height="300" ng-href="/checkout">
-    <h3>{{ s.title }}</h3>
-    <p>{{ s.price }}</p>
+<div ng-controller="CheckoutController" ng-repeat="c in cart">
+    <img src="{{ c.imageurl }}" width="300" height="300" ng-href="/checkout">
+    <h3>{{ c.title }}</h3>
+    <p>{{ c.price }}</p>
 </div>
 
 <div ng-controller="CheckoutController">
