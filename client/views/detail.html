@@ -14,9 +14,7 @@
       
           <!-- Collect the nav links, forms, and other content for toggling -->
           <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item">
-                  <a class="nav-link active" ng-href=“/about“>ABOUT</a>
-                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" ng-href=“/products/merch“>MERCH</a>
                 </li>
@@ -31,6 +29,7 @@
      </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
      </nav>
+    </ul>
     
      <div class="page-header" id="logo">
             <a ng-href="/products/merch"> <img src="https://s1.postimg.org/1hgme8qoa7/Newlogo.png" alt=""></a>
@@ -41,20 +40,21 @@
 
 <!-- DEFAULT FROM WELCOME / MERCH HEADER -->
 
-        
+       
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-<ul class="nav navbar-nav navbar-right">
+        
+<ul class="nav navbar-nav navbar-right"> 
                 <li><a href="/checkout">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-         </ul>
-        <h1 class="col-md-12">{{ product.name }}</h1>
+         <h1 class="col-md-12">{{ product.name }}</h1>
     </div>
 </div>
 
 <!-- ITEM DETAIL CONTROLLER BINDING -->
 <div class="wrapper">
-    <div class="" ng-controller="DetailController">
-        <img src="{{ product.imageurl }}" width="400" height="400">
+
+    <div class="">
+        <img src="{{ product.imageurl }}" width="500" height="500">
         <h3>{{ product.name }}</h3>
         <h5>{{ product.description }} {{ product.price }}</h5>
 
@@ -62,4 +62,5 @@
             <a class="btn btn-info" role="button" ng-href="/{{ p.id }}" ng-click="addToCart()">ADD TO CART</a>
         </p>
     </div>
+</div>
 </div>
