@@ -7,11 +7,11 @@ angular.module('store', ['ngRoute', 'ngResource', 'store.controllers', 'store.fa
     })
     .when('/products/merch', {
         templateUrl: 'views/merch.html',
-        controller: 'ProductsController' 
+        controller: 'MerchController' 
     })
     .when('/products/apparel', { 
         templateUrl: 'views/apparel.html',
-        controller: 'ProductsController' 
+        controller: 'ApparelController' 
     })
     .when('/purchases', {
         templateUrl: 'views/cart.html',
