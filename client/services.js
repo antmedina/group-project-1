@@ -6,4 +6,7 @@ angular.module('store.services', [])
                 $rootScope.seo[p] = data[p];
             }
         }
-    }]);
+    }])
+    .service("CheckoutService", function () {
+        this.checkoutItems = [];
+    });
