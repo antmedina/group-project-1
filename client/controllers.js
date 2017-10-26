@@ -44,27 +44,26 @@ angular.module('store.controllers', [])
             }
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
+            alert('Item has been added to your cart!');
             window.history.back();
         }
 
-        // $scope.cart = function () {
-        //     $location.path('/' + $routeParams.id + '/checkout');
-        // }
+        $scope.cart = function () {
+            $location.path('/' + $routeParams.id + '/checkout');
+        }
     }])
 
 
     .controller('CheckoutController', ['$scope', '$location', 'Product', 'Purchases', 'CheckoutService', '$routeParams', function ($scope, $location, Product, Purchases, CheckoutService, $routeParams) {
         $scope.cart = CheckoutService.checkoutItems;
-        console.log(CheckoutService.checkoutItems);
+       
 
         
         
         $scope.remove = function () {
-
+            var i = CheckoutService.checkoutItems.indexOf($scope.cart.item);
             if (confirm('Are you sure you want to remove this item from the cart?')) {
-                $scope.product.$delete(function () {
-                    // $location.replace().path('/');
-                });
+                CheckoutService.checkoutItems.splice(i, 1);
             }
         }
 
