@@ -41,6 +41,7 @@ angular.module('store.controllers', [])
                 imageurl: $scope.product.imageurl,
                 title: $scope.product.title,
                 price: $scope.product.price
+                //remove $scope.product to possibly eliminate the single item issue//
             }
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
