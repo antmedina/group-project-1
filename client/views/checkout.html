@@ -40,3 +40,51 @@
 <div class="padding center">
     <button class="button button-block button-balanced" ng-click="processPurchase()">Submit</button>
 </div>
+<!-- Stripe button -->
+<button class="pay">Pay</button> -->
+
+<script src="https://checkout.stripe.com/checkout.js">
+<script>
+    var handler = StripeCheckout.configure({
+      key: window.STRIPE_PUBLICK_KEY,
+      image: 'https://yourlogo.png',
+      locale: 'auto',
+      token: function(token) {
+        $('.pay').prop("disabled", true);
+        $('.pay').text('Paying...')
+        $.ajax({
+            url: 'https://webtask.it.auth0.com/your-account/stripe',
+            type: 'POST',
+            data: {
+              stripeToken: token.id
+            }
+        }).then(function(stripeCustomer) {
+          console.log('success');
+        }).fail(function(e) {
+          $('.pay').text('Buy');
+          alert('There was an error processing the payment. Please try again.')
+        });
+      }
+    });
+    
+    $(function() {
+      $('.pay').on('click', function(e) {
+        e.preventDefault();
+        handler.open({
+          name: 'Title',
+          description: 'My Subscription',
+          panelLabel: "Subscribe",
+          amount: 900, // 9 usd
+          email: 'default_email_if_you_have_it',
+          allowRememberMe: false
+        });
+      });
+    });
+    
+    
+    // close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+</script>
+// end stripe button//
