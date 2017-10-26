@@ -5,8 +5,7 @@ exports.charge = function (token, amt) {
         amount: amt * 100,
         currency: 'usd',
         source: token,
-        description: 'Checkout',
-        product: req.body.productid
+        description: 'Checkout'
     });
 }
 

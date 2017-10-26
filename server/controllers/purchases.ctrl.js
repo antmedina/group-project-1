@@ -9,25 +9,19 @@ router.post('/', function (req, res) {
     var amount = Number(p.amount);
     stripeSvc.charge(p.token, amount)
         .then(function (charge) {
-            procedures.create(charge.amount, charge.id)
+            return procedures.create(charge.amount, charge.id)
+        })
+        .then(function (purchase) {
+            var promises = [];
+            for (i = 0; i < req.body.product.length; i++) {
+                promises.push(procedures.createToPurchased(req.body.product[i], purchase.id));
+            }
+            return Promise.all(promises);
+        })
+        .then(function() {
+
         })
 
-
-
-
-
-
-
-
-
-
-    procedures.create(p.price, p.stripetransactionid)
-        .then(function (id) {
-            res.status(201).send(id);
-        }).catch(function (err) {
-            console.log(err);
-            res.sendStatus(500);
-        });
-});
+ });
 
 module.exports = router;   
