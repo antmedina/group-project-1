@@ -1,7 +1,6 @@
 var express = require('express');
 var procedures = require('../procedures/purchases.proc');
 
-
 var router = express.Router();
 
 router.post('/', function (req, res) {

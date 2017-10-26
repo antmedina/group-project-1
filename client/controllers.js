@@ -1,24 +1,29 @@
 angular.module('store.controllers', [])
-.controller('ProductsController', ['$scope', 'Product', function($scope, Product) {
-    $scope.products = Product.query(); //Check to see how the products table categorizes Merch & Apparel then use to query
+.controller('MerchController', ['$scope', 'Merch', function($scope, Merch) {
+
+    $scope.merch = Merch.query(); 
+}])
+.controller('ApparelController', ['$scope', 'Apparel', function($scope, Apparel) {
+    $scope.apparel = Apparel.query(); 
 }])
 .controller('SingleProductController', ['$scope', '$routeParams', '$location', 'Product', function($scope, $routeParams, $location, Product) {
     $scope.product = Product.get({ id: $routeParams.id });
 
-    $scope.cart = function() { //I think we should use a detail html
+    $scope.cart = function() { 
         $location.path('/' + $routeParams.id + '/add_to_cart');
-    }
-//CART CONTROLLER SCOPE BELOW NEEDS TO BE SEPARATED
-    $scope.remove = function() {
+    }    
+}])
+
+.controller('CartController', ['$scope', '$routeParams', '$location', 'Purchase', function($scope, $routeParams, $location, Purchase) {
+$scope.remove = function() {
+        
+    
         if (confirm('Are you sure you want to remove this item from the cart?')) {
             $scope.product.$delete(function() {
                 $location.replace().path('/');
             });
         }
     }
-}])
-.controller('CartController', ['$scope', '$routeParams', '$location', 'Purchase', function($scope, $routeParams, $location, Purchase) {
-//Cart controller empty
 }])
 .controller('CheckoutController', ['$scope', '$location', 'Purchase', function($scope, $location, Purchase) {
     var elements = stripe.elements();
