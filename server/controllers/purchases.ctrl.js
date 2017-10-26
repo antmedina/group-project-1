@@ -2,7 +2,6 @@ var express = require('express');
 var procedures = require('../procedures/purchases.proc');
 var stripeSvc = require('../services/stripe.svc');
 
-
 var router = express.Router();
 
 router.post('/', function (req, res) {
