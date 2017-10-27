@@ -30,7 +30,10 @@ angular.module('store.factories', [])
     }])
 
     .factory('Purchases', ['$resource', function ($resource) {
-        return $resource('/api/purchases/:id');
+        return $resource('/api/purchases/:id', { id: '@id' });
+        update: {
+            method: 'PUT'
+        }
     }])
 
     .factory('CreatePurchases', ['$resource', function ($resource) {

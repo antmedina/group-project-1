@@ -24,10 +24,9 @@ angular.module('store.controllers', [])
                 imageurl: $scope.product.imageurl,
                 title: $scope.product.title,
                 price: $scope.product.price
-                //remove $scope.product to possibly eliminate the single item issue//
+
             }
             CheckoutService.checkoutItems.push(payload);
-            console.log(CheckoutService.checkoutItems);
             alert('Item has been added to your cart!');
         }
 
@@ -50,41 +49,41 @@ angular.module('store.controllers', [])
             return total;
         }
 
-        // var elements = stripe.elements();
-        // var card = elements.create('card');
-        // card.mount('#card-field');
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-field');
 
-        // $scope.errorMessage = ' ';
+        $scope.errorMessage = '';
 
 
-        // $scope.stripeCharge = function() {
-        //     stripe.createToken(card, {
-        //         name: $scope.name,
-        //         address_line1: $scope.line1,
-        //         address_line2: $scope.line2,
-        //         address_city: $scope.city,
-        //         address_state: $scope.state
-        //     }).then(function(result) {
-        //         if (result.error) {
-        //             $scope.errorMessage = result.error.message;
-        //         } else {
-        //             // result.token is the card token (need id property)
-        //             var cart = CheckoutService.checkoutItems;
-        //             var c = new CreatePurchases({
-        //                 token: result.token.id,
-        //                 amount: $scope.getTotal(),
-        //                 cart: cart
-        //             });
+        $scope.stripeCharge = function() {
+            stripe.createToken(card, {
+                // name: $scope.name,
+                // address_line1: $scope.line1,
+                // address_line2: $scope.line2,
+                // address_city: $scope.city,
+                // address_state: $scope.state
+            }).then(function(result) {
+                if (result.error) {
+                    $scope.errorMessage = result.error.message;
+                } else {
+                    // result.token is the card token (need id property)
+                    var cart = CheckoutService.checkoutItems;
+                    var c = new Purchases({
+                        token: result.token.id,
+                        amount: $scope.getTotal(),
+                        cart: cart
+                    });
                     
-        //             c.$save(function() {
-        //                 alert('Thank you for the payment, an email has been sent.');
-        //                 $location.path('/');
-        //             }, function(err) {
-        //                 console.log(err);
-        //             });
-        //         }
-        //     });
-        // }
+                    c.$save(function() {
+                        alert('Thank you for the payment, an email has been sent.');
+                        $location.path('/');
+                    }, function(err) {
+                        console.log(err);
+                    });
+                }
+            });
+        }
         // end total function
         
         $scope.remove = function () {
