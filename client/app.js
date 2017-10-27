@@ -1,4 +1,4 @@
-angular.module('store', ['ngRoute', 'ngResource', 'store.controllers', 'store.factories', 'store.services'])
+angular.module('store', ['ngRoute', 'ngResource','store.controllers', 'store.factories', 'store.services'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
