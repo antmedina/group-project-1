@@ -3,6 +3,10 @@ body {
 }
 
 /* WELCOME */
+#welcome-top {
+  background-image: url(https://s1.postimg.org/5aru6cjxsf/covalence-store-home-hero.jpg);
+  background-size: cover;
+}
 
 #welcome-page:link {
 	color: white;
