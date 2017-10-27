@@ -18,9 +18,9 @@ router.post('/', function (req, res) {
             }
             return Promise.all(promises);
         })
-        .then(function() {
+        // .then(function() {
 
-        })
+        // })
 
  });
 
