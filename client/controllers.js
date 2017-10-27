@@ -41,6 +41,7 @@ angular.module('store.controllers', [])
                 imageurl: $scope.product.imageurl,
                 title: $scope.product.title,
                 price: $scope.product.price
+                //remove $scope.product to possibly eliminate the single item issue//
             }
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
@@ -57,8 +58,52 @@ angular.module('store.controllers', [])
     .controller('CheckoutController', ['$scope', '$location', 'Product', 'Purchases', 'CheckoutService', '$routeParams', function ($scope, $location, Product, Purchases, CheckoutService, $routeParams) {
         $scope.cart = CheckoutService.checkoutItems;
        
+        // get total function for checkout cart
+        $scope.getTotal = function () {
+            var total = 0
+            for (var i = 0; i <$scope.cart.length; i++){
+                var prod = $scope.cart[i];
+                total += (prod.price);
+            }
+            return total;
+        }
 
-        
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-field');
+
+        $scope.errorMessage = ' ';
+
+
+        $scope.stripeCharge = function() {
+            stripe.createToken(card, {
+                name: $scope.name,
+                address_line1: $scope.line1,
+                address_line2: $scope.line2,
+                address_city: $scope.city,
+                address_state: $scope.state
+            }).then(function(result) {
+                if (result.error) {
+                    $scope.errorMessage = result.error.message;
+                } else {
+                    // result.token is the card token (need id property)
+                    var cart = CheckoutService.checkoutItems;
+                    var c = new CreatePurchases({
+                        token: result.token.id,
+                        amount: $scope.getTotal(),
+                        cart: cart
+                    });
+                    
+                    c.$save(function() {
+                        alert('Thank you for the payment, an email has been sent.');
+                        $location.path('/');
+                    }, function(err) {
+                        console.log(err);
+                    });
+                }
+            });
+        }
+        // end total function
         
         $scope.remove = function () {
             var i = CheckoutService.checkoutItems.indexOf($scope.cart.item);
@@ -68,32 +113,4 @@ angular.module('store.controllers', [])
         }
 
 
-        // var elements = stripe.elements();
-        // var card = elements.create('card');
-        // card.mount('#card-field');
-
-        // $scope.errorMessage = '';
-
-        // $scope.processPurchase = function () {
-        //     stripe.createToken(card, {
-        //         name: $scope.name,
-        //         address_line1: $scope.line1,
-        //         address_city: $scope.city,
-        //         address_state: $scope.state
-        //     }).then(function (result) {
-        //         if (result.error) {
-        //             $scope.errorMessage = result.error.message;
-        //         } else {
-        //             var d = new Purchase({
-        //                 token: result.token.id,
-        //                 amount: $scope.amount
-        //             });
-        //             d.$save(function () {
-        //                 alert('Thank you for your purchase');
-        //                 $location.path('/');
-        //             }, function (err) {
-        //             });
-        //         }
-        //     });
-        // }
     }]);

@@ -91,3 +91,13 @@ a:visited {
 a:hover {}
 
 a:active{}
+
+
+/*Checkout form*/
+form.my-form{
+position: relative;
+width: 500px;
+left: 30%;
+color: white;
+}
+/* End Checkout Form Styling */
