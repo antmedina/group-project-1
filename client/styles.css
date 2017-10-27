@@ -1,27 +1,31 @@
+/* ITEM DETAIL */
+/* CHECKOUT  */
+/* CART */
+/* CONTACT US */
+
 body {
-  margin: 50px;
+  margin: 50px;  
 }
 
 /* WELCOME */
 #welcome-top {
   background-image: url(https://s1.postimg.org/5aru6cjxsf/covalence-store-home-hero.jpg);
   background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-#welcome-page:link {
-	color: white;
-}
-#welcome-page {
-  /* padding: 5% 20% 5% 20%; */
-	/* margin: 10%;
-	margin-top: 1%; */
+#welcome-drop {
 	color: white;
 	font-family: sans-serif;
 	font-weight: bold;
-	background: RGBA(0, 0, 139, .6);
+	background: RGBA(0, 0, 139, .1);
 	/* border-radius: 10px; */
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 15%;
     /* text-align: center; */
 }
 
@@ -50,13 +54,18 @@ a:active{}
 
 
 /*MERCH PAGE ( DEFAULT HOME)*/
-#home-img {
-  size: cover;
+#home-merch {
+  background-image: url(https://s1.postimg.org/97vyshzclb/covalence-store-home.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 60%;
+  /* background-position: 0% 100% 100% 0%;   */
+  background-position: center left;
+  
 }
-/* ITEM DETAIL */
-/* CHECKOUT  */
-/* CART */
 
+
+/* GENERAL */
 .jumbotron {
   background: RGBA(255, 255, 255, 1);;
   color: white;
@@ -69,8 +78,7 @@ a:active{}
   background: RGBA(0, 0, 139, .6);
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  /* display: grid;
-  grid-gap: 15px; */
+  margin: 10px;
 }
 #header-logo {
   float: top;
