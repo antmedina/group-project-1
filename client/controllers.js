@@ -58,11 +58,11 @@ angular.module('store.controllers', [])
 
         $scope.stripeCharge = function() {
             stripe.createToken(card, {
-                // name: $scope.name,
-                // address_line1: $scope.line1,
-                // address_line2: $scope.line2,
-                // address_city: $scope.city,
-                // address_state: $scope.state
+                name: $scope.name,
+                address_line1: $scope.line1,
+                address_line2: $scope.line2,
+                address_city: $scope.city,
+                address_state: $scope.state
             }).then(function(result) {
                 if (result.error) {
                     $scope.errorMessage = result.error.message;

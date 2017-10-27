@@ -13,14 +13,18 @@ router.post('/', function (req, res) {
         })
         .then(function (purchase) {
             var promises = [];
-            for (i = 0; i < checkoutItems.length; i++) {
-                promises.push(procedures.createToPurchased(checkoutItems.id[i], purchase.id));
+            for (i = 0; i < p.cart.length; i++) {
+                promises.push(procedures.createToPurchased(p.cart[i].id, purchase.id));
             }
             return Promise.all(promises);
         })
         // .then(function() {
 
         // })
+        .catch(function(err) {
+            console.log(err);
+            res.sendStatus(500);
+        });
 
  });
 

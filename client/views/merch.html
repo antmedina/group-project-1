@@ -48,7 +48,7 @@
 <div class="wrapper">
 
     <div class="box" ng-repeat="m in merch" ng-controller="MerchController">
-        <a ng-href="/products/{{ m.id }}"><img src="{{ m.imageurl }}" width="350" height="350" ng-href="/products/{{ m.id }}"></a>
+        <a ng-href="/products/{{ m.id }}"><img ng-src="{{ m.imageurl }}" width="350" height="350" ng-href="/products/{{ m.id }}"></a>
         <h3>{{ m.name }}</h3>
         <!-- <h5>{{ m.description }} {{ m.price }}</h5> -->
 
