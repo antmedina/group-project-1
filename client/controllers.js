@@ -45,7 +45,7 @@ angular.module('store.controllers', [])
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
             alert('Item has been added to your cart!');
-            window.history.back();
+
         }
 
         $scope.cart = function () {
