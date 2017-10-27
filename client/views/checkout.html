@@ -54,45 +54,15 @@
 </div>
 
 <!-- total div -->
-<div id=checkoutTotal>
+<!-- <div id=checkoutTotal>
     <div>
         Total: ${{ getTotal() }}
     </div>
-</div>
+</div> -->
 <!-- end total div -->
 
 
 <h5 id="pay-logo">PAYMENTS ACCEPTED: Visa MC Amex Discover IMAGE logos</h1>
-
-    <div ng-controller="CheckoutController">
-        <!-- html form -->
-        <form action="charge()">
-            <label class="item item-input">
-                <span class="input-label">Card number</span>
-                <input type="text" size="20" ng-model="FormData.number" placeholder="4242 4242 4242 4242" />
-            </label>
-
-            <label class="item item-input">
-                <span class="input-label">Exp. Mth (MM)</span>
-                <input type="text" size="2" ng-model="FormData.exp_month">
-            </label>
-
-            <label class="item item-input">
-                <span class="input-label">Exp. Year (YYYY)</span>
-                <input type="text" size="4" ng-model="FormData.exp_year">
-            </label>
-
-            <label class="item item-input">
-                <span class="input-label">Sec. Code (CVC)</span>
-                <input type="text" size="4" ng-model="FormData.cvc">
-            </label>
-        </form>
-
-    </div>
-
-    <div class="padding center">
-        <button class="button button-block button-balanced" ng-click="processPurchase()">Submit</button>
-    </div>
 
     <!-- form field code pt.2 -->
     <form class="my-form" ng-submit="stripeCharge()"> 
