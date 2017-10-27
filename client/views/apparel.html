@@ -35,17 +35,23 @@
         </div><!-- /.container-fluid -->
     </nav>
     </div>
-<!-- APPAREL CONTROLLER BINDING ng-click="addToCart()"-->
+
+
+<div id="apparel-img"></div>
+
+
+
+<!-- APPAREL CONTROLLER BINDING-->
+<div class="item-box">
 <div class="wrapper">
     <div ng-repeat="a in apparel" ng-controller="ApparelController">
-        <a ng-href="/products/{{ a.id }}">
-            <img src="{{ a.imageurl }}" width="300" height="300">
-        </a>
-        <h3>{{ a.name }}</h3>
+        <a ng-href="/products/{{ a.id }}"><img src="{{ a.imageurl }}" width="300" height="300"></a> 
+        <h3>{{ a.title }}</h3>
         <!-- <h5>{{ a.description }} {{ a.price }}</h5> -->
 
         <p>
             <a class="btn btn-info" role="button" ng-href="/products/{{ a.id }}">MORE INFO</a>
         </p>
     </div>
+</div>
 </div>
