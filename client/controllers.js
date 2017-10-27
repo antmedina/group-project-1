@@ -4,32 +4,15 @@ angular.module('store.controllers', [])
 
         $scope.merch = Merch.query();
 
-        $scope.addToCart = function (id, imageurl, title, price) {
-            var payload = {
-                id: id,
-                imageurl: imagery,
-                title: title,
-                price: price
-            }
-            checkoutService.checkoutItems.push(payload);
-            console.log(checkoutService.checkoutItems);
-        }
+
     }])
 
     .controller('ApparelController', ['$scope', 'Apparel', function ($scope, Apparel) {
 
         $scope.apparel = Apparel.query();
 
-        $scope.addToCart = function (id, imageurl, title, price) {
-            var payload = {
-                id: id,
-                imageurl: imageurl,
-                title: title,
-                price: price
-            }
-            checkoutService.checkoutItems.push(payload);
-            console.log(checkoutService.checkoutItems);
-        }
+
+        
     }])
 
     .controller('DetailController', ['$scope', '$routeParams', '$location', 'Product', 'CheckoutService', function ($scope, $routeParams, $location, Product, CheckoutService) {
@@ -46,7 +29,6 @@ angular.module('store.controllers', [])
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
             alert('Item has been added to your cart!');
-            window.history.back();
         }
 
         $scope.cart = function () {
