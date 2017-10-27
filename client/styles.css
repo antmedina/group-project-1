@@ -1,11 +1,29 @@
 /* ITEM DETAIL */
-/* CHECKOUT  */
-/* CART */
-/* CONTACT US */
 
-body {
-  margin: 50px;  
+
+
+
+
+
+
+/* NAV BAR */
+#header-logo {
+  float: top;
 }
+.jumbotron {
+  background: RGBA(255, 255, 255, 1);;
+  color: white;
+  margin: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 20px;
+}
+
+
+
+
+
+
 
 /* WELCOME */
 #welcome-top {
@@ -39,6 +57,98 @@ body {
   text-size: 60px;
 }
 
+
+
+
+
+
+
+/*MERCH PAGE ( DEFAULT HOME)*/
+#home-merch {
+  background-image: url(https://s1.postimg.org/876797kpvz/covalence-store-misc-hero.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+  background-position: bottom left;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+/*APPAREL PAGE*/
+#apparel-img {
+  background-image: url(https://s1.postimg.org/96z20k11y7/covalence-store-apparel-hero.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+  border-radius: 5px;
+  
+}
+
+
+
+
+
+/* CHECKOUT  */
+
+/* cart */
+#cart {
+  background-color: white;
+  }
+  
+  #cart-img {
+    right: 0%;
+    height: 5%;
+    width: 5%;
+  }
+  
+  
+  /* stripe checkout */
+  #checkout {
+    
+    }
+    
+  .input-label {
+    color: white;
+  }
+
+/* CONTACT US */
+p.contactus2{
+  text-align: center;
+  color:white;
+}
+p.contactus{
+  color:white;
+}
+h2.contactus{
+  text-align: center;
+  color:white;
+}
+
+
+
+
+
+
+
+/* GENERAL  */
+body {
+  background-color: RGBA(255, 255, 255, .6);
+  margin: 50px;  
+}
+
+h1 {
+  font-size: 45px;
+  color: white;
+	
+}
+h5 {
+  color: white;
+}
+
 a:link {
 	color: white;
 	text-decoration: none;
@@ -52,44 +162,19 @@ a:hover {}
 
 a:active{}
 
-
-/*MERCH PAGE ( DEFAULT HOME)*/
-#home-merch {
-  background-image: url(https://s1.postimg.org/97vyshzclb/covalence-store-home.jpg);
+#showcase {
+  background-image: url(https://i.ytimg.com/vi/BYdMgFWYUto/maxresdefault.jpg);
+  background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 60%;
-  /* background-position: 0% 100% 100% 0%;   */
-  background-position: center left;
-  
-}
-
-
-/* GENERAL */
-.jumbotron {
-  background: RGBA(255, 255, 255, 1);;
-  color: white;
-  margin: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  max-height: 20px;
+  background-color: RGBA(255, 255, 255, .6);
+  /* border-radius: 10px; not working*/
+  height: 100vh;
 }
 .item-box {
   background: RGBA(0, 0, 139, .6);
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   margin: 10px;
-}
-#header-logo {
-  float: top;
-}
-
-#showcase {
-  background-image: url(https://i.ytimg.com/vi/BYdMgFWYUto/maxresdefault.jpg);
-  background-position: center;
-  background-size: cover;
-  /* border-radius: 10px; not working*/
-  height: 100vh;
 }
 .wrapper {
   grid-template-columns: 50% 50%;
@@ -100,28 +185,4 @@ a:active{}
 
 #id {
   padding-top: 5%;
-}
-
-
-h1 {
-  font-size: 45px;
-  color: white;
-	
-}
-h5 {
-  color: white;
-}
-.input-label {
-  color: white;
-}
-p.contactus2{
-  text-align: center;
-  color:white;
-}
-p.contactus{
-  color:white;
-}
-h2.contactus{
-  text-align: center;
-  color:white;
 }

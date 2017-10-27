@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-<div id="test">
+
         <div class="jumbotron jumbotron-fluid">
                     <a href="/products/merch"> <img id="header-logo" src="https://s1.postimg.org/6boi8sj1kf/Screen_Shot_2017-10-25_at_9.18.50_PM.png" alt=""> </a>
         </div>        
@@ -35,14 +35,18 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        </div>
+        
+        
+        
+        
+        <div id="cart"></div>
 
+
+
+
+        
 <!-- CHECKOUT CONTROLLER -->
-<div class="page-header row">
-    <h1 class="col-md-12">CHECKOUT</h1>
 
-</div>
-            <!-- CART CONTROLLER BINDING -->
 <div ng-repeat="s in shoppingCart">
 <img src="{{ s.imageurl }}" width="300" height="300" ng-href="/checkout">
 <h3>{{ s.title }}</h3>
