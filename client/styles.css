@@ -1,57 +1,13 @@
+body {
+  margin: 50px;
+}
+
 /* WELCOME */
-/* MERCH AND APPAREL */
-/* ITEM DETAIL */
-/* CHECKOUT  */
-/* CART */
-.jumbotron {
-  background: RGBA(255, 255, 255, .5);;
-  color: white;
-}
-#showcase {
-  background-image: url(https://i.ytimg.com/vi/BYdMgFWYUto/maxresdefault.jpg);
-  background-position: center;
+#welcome-top {
+  background-image: url(https://s1.postimg.org/5aru6cjxsf/covalence-store-home-hero.jpg);
   background-size: cover;
-  height: 100vh;
-}
-.wrapper {
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  display: inline-grid;
-  padding: 5% 5% 5% 5%;
-  justify-content: space-between;
-  align-content: space-evenly;
 }
 
-#id {
-  padding-top: 5%;
-}
-
-.page-header {
-  border-top: none !important; 
-}
-
-h1 {
-  font-size: 45px;
-  color: white;
-	
-}
-h5 {
-  color: white;
-}
-.input-label {
-  color: white;
-}
-p.contactus2{
-  text-align: center;
-  color:white;
-}
-p.contactus{
-  color:white;
-}
-h2.contactus{
-  text-align: center;
-  color:white;
-}
 #welcome-page:link {
 	color: white;
 }
@@ -88,15 +44,76 @@ a:visited {
 	color: white;
 }
 
-<<<<<<< HEAD
-hr {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-/* the of landing page */
-=======
 a:hover {}
 
 a:active{}
->>>>>>> 60d9ccc7abbd2696daa04c6582e65866be95a4a0
+
+
+/*MERCH PAGE ( DEFAULT HOME)*/
+#home-img {
+  size: cover;
+}
+/* ITEM DETAIL */
+/* CHECKOUT  */
+/* CART */
+
+.jumbotron {
+  background: RGBA(255, 255, 255, 1);;
+  color: white;
+  margin: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 20px;
+}
+.item-box {
+  background: RGBA(0, 0, 139, .6);
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  /* display: grid;
+  grid-gap: 15px; */
+}
+#header-logo {
+  float: top;
+}
+
+#showcase {
+  background-image: url(https://i.ytimg.com/vi/BYdMgFWYUto/maxresdefault.jpg);
+  background-position: center;
+  background-size: cover;
+  /* border-radius: 10px; not working*/
+  height: 100vh;
+}
+.wrapper {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  display: grid;
+  grid-gap: 15px;
+}
+
+#id {
+  padding-top: 5%;
+}
+
+
+h1 {
+  font-size: 45px;
+  color: white;
+	
+}
+h5 {
+  color: white;
+}
+.input-label {
+  color: white;
+}
+p.contactus2{
+  text-align: center;
+  color:white;
+}
+p.contactus{
+  color:white;
+}
+h2.contactus{
+  text-align: center;
+  color:white;
+}
