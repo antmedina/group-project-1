@@ -142,7 +142,7 @@
   }
   #checkout {
     
-    }
+  }
     
  
 
@@ -187,6 +187,7 @@ body {
   grid-template-rows: 45% 45%;
   grid-gap: 10%;
   border-radius: 5px;
+  color: rgba(20, 106, 177, 0.884);
 }
 .data {
   padding-right: 5%;
