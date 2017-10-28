@@ -6,7 +6,9 @@
   margin: 0%;
 }
 #header-logo {
-  float: top;
+  position: relative;
+  bottom: 47px;
+  border-radius: 5px;
 }
 .jumbotron {
   background: RGBA(255, 255, 255, 1);;
@@ -69,7 +71,8 @@
   width: 100%;
   height: 40%;
   background-position: bottom left;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 
@@ -83,7 +86,8 @@
   background-size: cover;
   width: 100%;
   height: 40%;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   
 }
 
@@ -174,16 +178,38 @@ a:active{}
 
 
 .item-box {
+  margin-top: 20px;
   background: RGBA(255, 255, 255, .6);
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  margin: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 .wrapper {
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   display: grid;
-  grid-gap: 15px;
+  padding: 2%;
+}
+.box {
+  margin: 2%;
+  padding: 2%;
+  background: RGBA(255, 255, 255, 1);
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 45% 45%;
+  grid-gap: 10%;
+  border-radius: 5px;
+}
+#detail-wrapper {
+  padding-right: 4%;
+}
+#detail-box {
+  margin: 2%;
+  padding: 2%;
+  background: RGBA(255, 255, 255, .7);
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
 }
 
 #id {
