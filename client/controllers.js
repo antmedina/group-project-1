@@ -1,21 +1,34 @@
 angular.module('store.controllers', [])
 
-    .controller('MerchController', ['$scope', 'Merch', function ($scope, Merch) {
+    .controller('MerchController', ['$scope', 'Merch', 'SEOService', '$location', function ($scope, Merch, SEOService, $location) {
 
         $scope.merch = Merch.query();
+
+        SEOService.setSEO({
+            title: 'Merch',
+            image: 'http://' + $location.host() + '/client/images/covalence-store-misc-15.png',
+            url: $location.url(),
+            description: 'Merchandise for every occasion'
+        })
 
 
     }])
 
-    .controller('ApparelController', ['$scope', 'Apparel', function ($scope, Apparel) {
+    .controller('ApparelController', ['$scope', 'Apparel', 'SEOService', '$location', function ($scope, Apparel, SEOService, $location) {
 
         $scope.apparel = Apparel.query();
+        SEOService.setSEO({
+            title: 'Apparel',
+            image: 'http://' + $location.host() + '/client/images/covalence-store-misc-15.png',
+            url: $location.url(),
+            description: 'Apparel for every occasion'
+        })
 
 
         
     }])
 
-    .controller('DetailController', ['$scope', '$routeParams', '$location', 'Product', 'CheckoutService', function ($scope, $routeParams, $location, Product, CheckoutService) {
+    .controller('DetailController', ['$scope', '$routeParams', '$location', 'Product', 'CheckoutService', 'SEOService', function ($scope, $routeParams, $location, Product, CheckoutService, SEOService) {
         $scope.product = Product.get({ id: $routeParams.id });  
 
         $scope.addToCart = function (id, imageurl, title, price) {
@@ -33,10 +46,18 @@ angular.module('store.controllers', [])
         $scope.cart = function () {
             $location.path('/' + $routeParams.id + '/checkout');
         }
+
+        SEOService.setSEO({
+            title: 'Product',
+            image: 'http://' + $location.host() + '/client/images/covalence-store-misc-15.png',
+            url: $location.url(),
+            description: 'Take a closer look'
+        })
+
     }])
 
 
-    .controller('CheckoutController', ['$scope', '$location', 'Product', 'Purchases', 'CheckoutService', '$routeParams', function ($scope, $location, Product, Purchases, CheckoutService, $routeParams) {
+    .controller('CheckoutController', ['$scope', '$location', 'Product', 'Purchases', 'CheckoutService', '$routeParams', 'SEOService', function ($scope, $location, Product, Purchases, CheckoutService, $routeParams, SEOService) {
         $scope.cart = CheckoutService.checkoutItems;
        
         // get total function for checkout cart
@@ -58,11 +79,7 @@ angular.module('store.controllers', [])
 
         $scope.stripeCharge = function() {
             stripe.createToken(card, {
-                name: $scope.name,
-                address_line1: $scope.line1,
-                address_line2: $scope.line2,
-                address_city: $scope.city,
-                address_state: $scope.state
+                name: $scope.name
             }).then(function(result) {
                 if (result.error) {
                     $scope.errorMessage = result.error.message;
@@ -72,15 +89,16 @@ angular.module('store.controllers', [])
                     var c = new Purchases({
                         token: result.token.id,
                         amount: $scope.getTotal(),
-                        cart: cart
-                    });
+                        cart: cart,
+                        email: $scope.email
+                    })
                     
-                    c.$save(function() {
+                    c.$save(function(succes) {
                         alert('Thank you for the payment, an email has been sent.');
                         $location.path('/');
                     }, function(err) {
                         console.log(err);
-                    });
+                    })
                 }
             });
         }
@@ -92,6 +110,13 @@ angular.module('store.controllers', [])
                 CheckoutService.checkoutItems.splice(i, 1);
             }
         }
+
+        SEOService.setSEO({
+            title: 'Checkout',
+            image: 'http://' + $location.host() + '/client/images/covalence-store-misc-15.png',
+            url: $location.url(),
+            description: 'Are you ready to checkout?'
+        })
 
 
     }]);

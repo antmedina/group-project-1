@@ -54,7 +54,7 @@
 </div>
 <!-- CART CONTROLLER BINDING -->
 <div ng-repeat="c in cart" ng-model="cart.item">
-    <img src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
+    <img ng-src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
     <h3>{{ c.title }}</h3>
     <p>{{ c.price }}</p>
     <button class="delete-btn" ng-click="remove()">REMOVE FROM CART</button>

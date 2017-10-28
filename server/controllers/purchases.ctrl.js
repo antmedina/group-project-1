@@ -9,7 +9,7 @@ router.post('/', function (req, res) {
     var amount = Number(p.amount);
     stripeSvc.charge(p.token, amount)
         .then(function (charge) {
-            return procedures.create(charge.amount, charge.id)
+            return procedures.create(amount, charge.id)
         })
         .then(function (purchase) {
             var promises = [];

@@ -55,19 +55,12 @@
 <div class="item-box">
     <div class="wrapper">
 
-<<<<<<< HEAD
-    <div class="box" ng-repeat="m in merch" ng-controller="MerchController">
-        <a ng-href="/products/{{ m.id }}"><img ng-src="{{ m.imageurl }}" width="350" height="350" ng-href="/products/{{ m.id }}"></a>
-        <h3>{{ m.name }}</h3>
-        <!-- <h5>{{ m.description }} {{ m.price }}</h5> -->
-=======
         <div class="box" ng-repeat="m in merch" ng-controller="MerchController">
             <a ng-href="/products/{{ m.id }}">
-                <img src="{{ m.imageurl }}" width="350" height="350" ng-href="/products/{{ m.id }}">
+                <img ng-src="{{ m.imageurl }}" width="350" height="350" ng-href="/products/{{ m.id }}">
             </a>
             <h3>{{ m.title }}</h3>
             <!-- <h5>{{ m.description }} {{ m.price }}</h5> -->
->>>>>>> 50a0d83fda0a1daf2c60b5300fbe0bd1747275ee
 
             <p>
                 <a class="btn btn-info" role="button" ng-href="/products/{{ m.id }}" ng-href="/products/detail">DETAIL</a>
