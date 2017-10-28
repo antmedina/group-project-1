@@ -144,37 +144,17 @@
     
     }
     
-  .input-label {
-    color: white;
-  }
-
-/* CONTACT US */
-p.contactus2{
-  text-align: center;
-  color:slategrey;
-}
-p.contactus{
-  color:steelblue;
-}
-h2.contactus{
-  text-align: center;
-  color:darkcyan;
-}
+ 
 
 
 
 
 
 
-
-/* GENERAL  */
+/* GENERAL BODY THEME STYLING */
 html {
-  
   height: 100%;
-  
-   
 }
-
 
 body {
   background-image: url(https://s1.postimg.org/1qawlc0d2n/background.jpg);
@@ -184,32 +164,6 @@ body {
  
   margin: 5%;
 }
-
-
-
-
-h1 {
-  font-size: 45px;
-  color: white;
-	
-}
-h5 {
-  color: white;
-}
-
-a:link {
-	color: white;
-	text-decoration: none;
-}
-
-a:visited {
-	color: white;
-}
-
-a:hover {}
-
-a:active{}
-
 
 .item-box {
   margin-top: 20px;
@@ -246,29 +200,45 @@ a:active{}
 }
 
 
-h1 {
-  font-size: 45px;
-  color: white;
-	
-}
-h5 {
-  color: white;
-}
-
+/* CONTACT US */
 .input-label {
-  color: white;
+  color: teal;
 }
 p.contactus2{
   text-align: center;
-  color:white;
+  color:darkblue;
 }
 p.contactus{
-  color:white;
+  color:darkblue;
 }
 h2.contactus{
   text-align: center;
-  color:white;
+  color:darkblue;
 }
+.contact-box {
+  background: RGBA(255, 255, 255, .6);
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  color: teal;
+}
+/* REPEAT CONTACT US? - REMINDER TO DOUBLE CHECK BEFORE DELETE
+p.contactus2{
+  text-align: center;
+  color:slategrey;
+}
+p.contactus{
+  color:steelblue;
+}
+h2.contactus{
+  text-align: center;
+  color:darkcyan;
+}
+ */
+
+
+/* END OF CONTACT US */
+
 /*Checkout form*/
 form.my-form{
   position: relative;
@@ -277,3 +247,54 @@ form.my-form{
   color: white;
   }
   /* End Checkout Form Styling */
+
+
+
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* fixed height of the footer */
+    height: 10%;
+    background-color: (29, 185, 196, 1); 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+  
+  }
+/* END OF FOOTER */
+
+/* TBD miscellaneous styling */
+  /* h1 {
+    font-size: 45px;
+    color: white;
+    
+  }
+  h5 {
+    color: white;
+  }
+
+
+h1 {
+  font-size: 45px;
+  color: white;
+	
+}
+h5 {
+  color: white;
+}
+  
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+  a:hover {}
+  
+  a:active{} */
