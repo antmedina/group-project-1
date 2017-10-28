@@ -133,6 +133,13 @@
   
   
   /* stripe checkout */
+  #pay-group {
+    text-align: center;
+  }
+  .pay-logo {
+    height: 5%;
+    width: 5%;
+  }
   #checkout {
     
     }
