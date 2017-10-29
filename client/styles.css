@@ -263,7 +263,28 @@ form.my-form{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
-  
+    color: white;
+  }
+  .ppp {
+    grid-template-columns: 25% 25% 25% 25%;
+    display: inline;
+  }
+
+  #ponieA {
+    height: 5%;
+    width: 5%;
+  }
+  #ponieD {
+    height: 5%;
+    width: 5%;
+  }
+  #ponieS {
+    height: 5%;
+    width: 5%;
+  }
+  #ponieE {
+    height: 5%;
+    width: 5%;
   }
 /* END OF FOOTER */
 
@@ -299,3 +320,4 @@ h5 {
   a:hover {}
   
   a:active{} */
+
