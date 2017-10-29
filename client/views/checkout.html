@@ -45,9 +45,9 @@
 <div class="item-box">
     <h2 style="text-align: center">SHOPPING CART</h2>
     <div class="cart -wrapper">
-        <div class="cart-box" ng-controller="CheckoutController" ng-repeat="c in cart" ng-model="cart.item">
+        <div class="cart-box" ng-repeat="c in cart" ng-model="cart.item">
             <div id="cart-data">
-                <img id="c-img" src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
+                <img id="c-img" ng-src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
 
                 <h4 id="c-title">{{ c.title }}</h3>
                     <h4 id="c-price">${{ c.price }}</h4>

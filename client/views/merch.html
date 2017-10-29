@@ -54,7 +54,7 @@
 
         <div class="box" ng-repeat="m in merch" ng-controller="MerchController">
             <a ng-href="/products/{{ m.id }}">
-                <img src="{{ m.imageurl }}" width="250" height="250" ng-href="/products/{{ m.id }}">
+                <img ng-src="{{ m.imageurl }}" width="250" height="250" ng-href="/products/{{ m.id }}">
             </a>
             <div class="data">
                 <h3 class="item-text">{{ m.title }}</h3>
