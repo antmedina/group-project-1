@@ -18,13 +18,13 @@ router.post('/', function (req, res) {
             }
             return Promise.all(promises);
         })
-        // .then(function() {
 
-        // })
-        .catch(function (err) {
+        .then(function(success) {
+            res.sendStatus(204);
+        }, function(err) {
             console.log(err);
             res.sendStatus(500);
-        });
+        })
 
 });
 

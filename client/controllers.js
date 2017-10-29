@@ -41,6 +41,11 @@ angular.module('store.controllers', [])
             }
             CheckoutService.checkoutItems.push(payload);
             alert('Item has been added to your cart!');
+            if($scope.product.categoryid===1){
+                $location.path('/products/merch');
+            }else {
+                $location.path('products/apparel');
+            }
         }
 
         $scope.cart = function () {
@@ -95,7 +100,7 @@ angular.module('store.controllers', [])
                     
                     c.$save(function(succes) {
                         alert('Thank you for the payment, an email has been sent.');
-                        $location.path('/');
+                        $location.path('/contact');
                     }, function(err) {
                         console.log(err);
                     })
