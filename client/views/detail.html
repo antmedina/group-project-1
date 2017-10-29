@@ -48,12 +48,12 @@
         <div id="detail-box">
             <img src="{{ product.imageurl }}" width="600" height="600">
             <div id="detail-data">
-                <h3 class="item-text">{{ product.title }}</h3>
-                <h5 class="item-text">{{ product.description }} {{ product.price }}</h5>
+                <h2 class="item-text">{{ product.title }}</h2>
+                <h3 class="item-text">{{ product.description }}</h3>
 
-                <p>
-                    <a class="btn btn-info" role="button" ng-href="/products/merch" ng-click="addToCart()">ADD TO CART</a>
-                </p>
+                <p></p>
+                    <h3> {{ product.price }}</h3> <a class="btn btn-info" role="button" ng-href="/products/merch" ng-click="addToCart()">ADD TO CART</a>
+                
             </div>
         </div>
     </div>

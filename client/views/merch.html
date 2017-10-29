@@ -41,14 +41,10 @@
     <!-- /.container-fluid -->
 </nav>
 
+<div id="merch-img"></div>
 
 
-
-
-<div id="home-merch"></div>
-
-
-
+<!-- MERCH GRID BINDING -->
 
 <div class="item-box">
     <h2 style="text-align: center">
@@ -62,7 +58,7 @@
             </a>
             <div class="data">
                 <h3 class="item-text">{{ m.title }}</h3>
-                <h5 class="item-text">{{ m.price }}</h5>
+                <h4 class="item-text">{{ m.price }}</h4>
 
                 <p>
                     <a class="btn btn-info" role="button" ng-href="/products/{{ m.id }}" ng-href="/products/detail">DETAIL</a>
@@ -71,11 +67,15 @@
         </div>
     </div>
 </div>
+<!-- END OF MERCH GRID BINDING -->
+
 <br>
 <br>
 <br>
 <br>
 <br>
+
+<!-- FOOTER -->
 <footer>
         <div class="container">
                 <h5>PINK PRANCING PONIES</h5>
@@ -86,3 +86,4 @@
                 <h5> 2017 &copy;</h5>
         </div>
 </footer>
+<!-- END OF FOOTER -->

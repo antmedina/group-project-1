@@ -44,13 +44,15 @@
 <!-- CART CONTROLLER BINDING -->
 <div class="item-box">
     <h2 style="text-align: center">SHOPPING CART</h2>
-    <div class="wrapper">
-        <div class="box" ng-controller="CheckoutController" ng-repeat="c in cart" ng-model="cart.item">
-            <img src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
-            <div class="data">
-                <h3>{{ c.title }}</h3>
-                <p>{{ c.price }}</p>
-                <button class="delete-btn" ng-click="remove()">REMOVE FROM CART</button>
+    <div class="cart -wrapper">
+        <div class="cart-box" ng-controller="CheckoutController" ng-repeat="c in cart" ng-model="cart.item">
+            <div id="cart-data">
+            <img id="c-img" src="{{ c.imageurl }}" width="100" height="100" ng-href="/checkout">
+            
+                <h4 id="c-title" >{{ c.title }}</h3>           
+                <h4 id="c-price">{{ c.price }}</h4>
+                
+                <button id="c-remove" ng-click="remove()">X</button>
             </div>
         </div>
     </div>
@@ -74,7 +76,6 @@
        
     <div ng-model="amount">
         <h4>TOTAL AMOUNT DUE: ${{ getTotal() }}</h4>
-    
 
     <div class="form-group">
         <label for="card-field">Credit Card</label>
@@ -85,8 +86,9 @@
         <input class="form-control" type="text" placeholder="Email" ng-model="email">
     </div>
     <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
-    <input class="btn btn-info" type="submit" value="Submit Payment">
-
+    <div id="pay-button">
+    <input class="btn btn-info"  type="submit" value="Submit Payment">
+    </div>
 </form>
 
 <h5 id="pay-group">WE ACCEPT

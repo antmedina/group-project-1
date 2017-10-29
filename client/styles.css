@@ -62,7 +62,7 @@ ul.nav a:hover {
 /* END OF WELCOME */
 
 /*MERCH PAGE ( DEFAULT HOME)*/
-#home-merch {
+#merch-img {
   background-image: url(https://s1.postimg.org/876797kpvz/covalence-store-misc-hero.jpg);
   background-size: cover;
   width: 100%;
@@ -98,20 +98,20 @@ ul.nav a:hover {
 }
 #detail-box {
   margin: 2%;
-  padding: 2%;
-  background: RGBA(255, 255, 255, .7);
+  background: RGBA(255, 255, 255, .9);
+  grid-template-columns: 50% 50%;
   height: 100%;
   width: 100%;
   border-radius: 5px;
-  display:  inline-block;
+  display:  grid;
+  grid-gap: 2%;
 }
-
 #detail-data {
-  position: inherit;
-  float: right;
-  overflow-x: auto;
+  margin: 3%;
+  color: steelblue;
+  padding: 0%;
 }
-/* END OF GENERAL THEME */
+/* END OF DETAIL */
 
 
 /* CHECKOUT - CART  */
@@ -119,6 +119,46 @@ ul.nav a:hover {
 #cart {
   background-color: white;
 }
+.cart-wrapper {
+  grid-template-columns: 100%;
+  display: grid;
+  padding: 1%;
+}
+.cart-box {
+  margin: 2%;
+  grid-template-columns: 100%;
+  background: RGBA(255, 255, 255, 1);
+  border-radius: 5px;
+  color: rgba(20, 106, 177, 0.884);
+  height: 100px;
+  display: grid;
+}
+#cart-data {
+  grid-template-columns: 20% 30% 40% 10%;
+  display: grid;
+}
+#c-img {
+  display: grid;
+}
+#c-title {
+  padding: 8%;
+  display: grid;
+}
+#c-price {
+  padding: 6%;
+  display: grid;
+}
+#c-remove {
+  margin: 30%;
+  background: RGBA(255, 255, 255, .1);
+  color: red;
+  border-radius: 100%;
+  border: 2px solid red;
+  height: 26px;
+  width: 26px;
+  display: grid;
+
+} 
   
 /* CHECKOUT - STRIPE */
 form.my-form {
@@ -131,12 +171,13 @@ form.my-form {
   text-align: center;
 }
 .pay-logo {
-  height: 5%;
-  width: 5%;
+  height: 6%;
+  width: 6%;
+  border-radius: 0px;
 }
 #checkout {
-  margin-right: 25%;
-  margin-left: 25%; 
+  margin-left: 3%;
+  align-items: center;
   align-content: center;
 }
 /* END OF CHECKOUT */
@@ -167,23 +208,24 @@ body {
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   display: grid;
-  padding: 2%;
+  padding: 1%;
 }
 .box {
   margin: 2%;
-  padding: 2%;
+  padding: 0%;
   background: RGBA(255, 255, 255, 1);
   grid-template-columns: 45% 45%;
-  grid-template-rows: 45% 45%;
-  grid-gap: 10%;
+  grid-gap: 3%;
   border-radius: 5px;
   color: rgba(20, 106, 177, 0.884);
+  display: grid;
 }
 .data {
-  padding-right: 5%;
-  display: inline-block;
-  align-content: center;
-  float: right;
+  position: relative;
+}
+img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 #id {
@@ -225,7 +267,7 @@ h3.contactus {
   border-radius: 2px;
   color: teal;
 }
- */
+ 
 /* END OF CONTACT US */
 
 
