@@ -207,14 +207,25 @@ body {
 }
 p.contactus2{
   text-align: center;
-  color:darkblue;
+  color:teal;
 }
 p.contactus{
-  color:darkblue;
+  color:teal;
+  align-content: center;
+  text-align: center;
 }
 h2.contactus{
   text-align: center;
-  color:darkblue;
+  color:teal;
+}
+h3.contactus {
+  color: teal;
+}
+#about-box {
+  background: RGBA(255, 255, 255, 1);
+  padding: 10px;
+  border-radius: 2px;
+  color: teal;
 }
 .contact-box {
   background: RGBA(255, 255, 255, .6);
@@ -222,18 +233,6 @@ h2.contactus{
   width: 100%;
   border-radius: 2px;
   color: teal;
-}
-/* REPEAT CONTACT US? - REMINDER TO DOUBLE CHECK BEFORE DELETE
-p.contactus2{
-  text-align: center;
-  color:slategrey;
-}
-p.contactus{
-  color:steelblue;
-}
-h2.contactus{
-  text-align: center;
-  color:darkcyan;
 }
  */
 
