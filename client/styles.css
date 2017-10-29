@@ -224,8 +224,9 @@ h3.contactus {
 #about-box {
   background: RGBA(255, 255, 255, 1);
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 5px;
   color: teal;
+  border: 3px dotted teal;
 }
 .contact-box {
   background: RGBA(255, 255, 255, .6);
