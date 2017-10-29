@@ -19,9 +19,9 @@ router.post('/', function (req, res) {
             return Promise.all(promises);
         })
 
-        .then(function(success) {
+        .then(function (success) {
             res.sendStatus(204);
-        }, function(err) {
+        }, function (err) {
             console.log(err);
             res.sendStatus(500);
         })
