@@ -21,11 +21,11 @@ router.post('/', function (req, res) {
         // .then(function() {
 
         // })
-        .catch(function(err) {
+        .catch(function (err) {
             console.log(err);
             res.sendStatus(500);
         });
 
- });
+});
 
 module.exports = router;   
