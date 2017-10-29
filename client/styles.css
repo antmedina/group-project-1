@@ -323,12 +323,12 @@ h5 {
    background: lightblue;
  }
  a:link {
-  color: teal;
+  color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: steelblue;
+  color: lightcyan;
 }
 
 a:hover {
