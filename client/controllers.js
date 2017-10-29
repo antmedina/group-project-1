@@ -99,6 +99,8 @@ angular.module('store.controllers', [])
                     })
                     
                     c.$save(function(succes) {
+                        $scope.button= {};
+                        $scope.button.disabled=true;
                         alert('Thank you for the payment, an email has been sent.');
                         CheckoutService.checkoutItems = [];
                         $location.path('/contact');
@@ -108,6 +110,9 @@ angular.module('store.controllers', [])
                 }
             });
         }
+
+            
+        
         // end total function
         
         $scope.remove = function () {

@@ -87,7 +87,7 @@
                 </div>
                 <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
                 <div id="pay-button">
-                    <input class="btn btn-info" type="submit" value="Submit Payment">
+                    <input class="btn btn-info" type="submit" value="Submit Payment" ng-disabled="button.diabled">
                 </div>
         </form>
 
