@@ -100,6 +100,7 @@ angular.module('store.controllers', [])
                     
                     c.$save(function(succes) {
                         alert('Thank you for the payment, an email has been sent.');
+                        CheckoutService.checkoutItems = [];
                         $location.path('/contact');
                     }, function(err) {
                         console.log(err);
